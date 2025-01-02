@@ -17,8 +17,8 @@ const AppleFall: React.FC = () => {
   const inputRef = useRef<HTMLInputElement>(null);
   const [fallingSpeed, setFallingSpeed] = useState(100);
 
-  const correctSound = new Audio("/src/components/typinggame/collect-5930.mp3");
-  const missSound = new Audio("/src/components/typinggame/error-8-206492.mp3");
+  const correctSound = new Audio("/collect-5930.mp3");
+  const missSound = new Audio("/error-8-206492.mp3");
 
   const startGame = () => {
     setGameStarted(true);
