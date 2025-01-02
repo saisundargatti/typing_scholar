@@ -285,8 +285,8 @@ export const TypingTestPractice = () => {
                     ((state.duration - state.timeLeft) / 60)
                   ).toFixed(2)
                 ) > 0
-                  ? "src/pics/bikerunning.gif"
-                  : "src/pics/bikenotyetstarted.gif"
+                  ? "/pics/bikerunning.gif"
+                  : "/pics/bikenotyetstarted.gif"
               }
               alt="Motorbike Animation"
             />
@@ -382,7 +382,7 @@ export const QuickTip: React.FC = () => {
       {/* Image */}
       <div className="flex-[3]">
         <img
-          src="src/pics/picography-laptop-work-home-woman (1).jpg"
+          src="/pics/picography-laptop-work-home-woman (1).jpg"
           alt="Home row keys illustration"
           className="w-full h-auto rounded-md"
         />
