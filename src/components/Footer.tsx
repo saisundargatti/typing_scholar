@@ -1,5 +1,5 @@
 import React, { MouseEvent } from "react";
-import { KeyboardIcon, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Contact: React.FC = () => {
@@ -50,11 +50,13 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {/* Branding */}
           <div className="text-center md:text-left space-y-4">
-            <div className="flex items-center justify-center md:justify-start gap-3">
-              <div className="bg-white/10 p-3 rounded-lg">
-                <KeyboardIcon className="w-6 h-6 text-blue-400" />
+            <div className="flex flex-row gap-2">
+              <div className="bg-white rounded-sm w-8">
+                <img src="/typingscholarlogo.png" alt="english-typing-test" />
               </div>
-              <h3 className="text-2xl font-bold">Typing Scholar</h3>
+              <span className="text-xl font-bold tracking-wide">
+                Typing Scholar
+              </span>
             </div>
             <p className="text-gray-300 leading-relaxed">
               Learn touch typing with key-based exercises, practice on long

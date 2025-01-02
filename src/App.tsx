@@ -19,6 +19,7 @@ import CardSelection from "./components/typinggame/CardSelection";
 import AppleFall from "./components/typinggame/AppleFall";
 import Home from "./components/Home";
 import PrivacyPolicy from "./components/privacypolicy";
+import SocialMedia from "./components/SocialMedia";
 
 export default function App() {
   const [config, setConfig] = useState<TestConfig | null>(null);
@@ -43,6 +44,7 @@ export default function App() {
   return (
     <Router>
       <Navbar />
+      <SocialMedia />
       <main>
         <Routes>
           <Route

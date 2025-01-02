@@ -17,7 +17,7 @@ const Navbar = () => {
         <div>
           <Link to="/" className="flex items-center space-x-3">
             <div className="bg-white rounded-sm w-8">
-              <img src="/anyrgb.com.png" alt="english-typing-test" />
+              <img src="/typingscholarlogo.png" alt="english-typing-test" />
             </div>
             <span className="text-xl font-bold tracking-wide">
               Typing Scholar
