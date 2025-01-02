@@ -95,7 +95,7 @@ const AppleFall: React.FC = () => {
     <div
       className="min-h-screen bg-cover bg-center flex items-center justify-center p-4"
       style={{
-        backgroundImage: "url('/pics/newton_apple_tree.jpg')",
+        backgroundImage: "url('/newton_apple_tree.jpg')",
       }}
     >
       <div className="w-full max-w-lg bg-white/80 shadow-lg rounded-lg p-6">
@@ -131,7 +131,7 @@ const AppleFall: React.FC = () => {
               className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center"
               style={{ top: `${wordPosition}%` }}
             >
-              <img src="/pics/fresh-apple-icon (1).png" alt="apple" />
+              <img src="/fresh-apple-icon (1).png" alt="apple" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <span className="text-base font-semibold text-white bg-black/50 px-1 py-0.5 rounded max-w-[90%]">
                   <span className="text-green-400">
