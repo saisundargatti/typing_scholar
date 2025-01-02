@@ -14,7 +14,7 @@ import {
   TypingTestPractice,
   QuickTip,
 } from "./components/practice/TypingTestPractice";
-import MemoryFingers from "./components/typinggame/memoryfingers";
+import MemoryFingers from "./components/typinggame/fingermappinggame";
 import CardSelection from "./components/typinggame/CardSelection";
 import AppleFall from "./components/typinggame/AppleFall";
 import Home from "./components/Home";

@@ -136,7 +136,7 @@ export const Aboutus: React.FC = () => {
           <li>Structured typing courses for beginners to advanced users</li>
           <li>Interactive practice sessions with real-time feedback</li>
           <li>Engaging typing games to make learning enjoyable</li>
-          <li>Learn, Practice and Take Mock Tests</li>
+          <li>Learn, Practice and Take Mock Typing Tests</li>
         </ul>
       </div>
     </section>
