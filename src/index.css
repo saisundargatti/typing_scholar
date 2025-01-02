@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes blink-red {
+  0%,
+  100% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: rgba(255, 0, 0, 0.2);
+  }
+}
+
+.animate-blink-red {
+  animation: blink-red 0.15s ease-in-out;
+}
+.finger.highlighted {
+  background-color: lightgreen; /* Gold color for highlight */
+  transform: scale(1.1); /* Slightly enlarge the highlighted finger */
+}
+/* Target the scrollbar for webkit browsers (Chrome, Safari, Edge) */
+.scrollable-content::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+  background-color: #4b5563; /* Color of the scrollbar thumb */
+  border-radius: 8px; /* Rounded corners for the thumb */
+}
+
+.scrollable-content::-webkit-scrollbar-track {
+  background-color: #e5e7eb; /* Color of the track */
+  border-radius: 8px; /* Rounded corners for the track */
+}
+/* Add this to your global styles (globals.css) or directly to the Sidebar component styles */

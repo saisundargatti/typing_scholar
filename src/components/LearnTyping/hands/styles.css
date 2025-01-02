@@ -1,0 +1,202 @@
+.hand-container {
+  text-align: center;
+}
+
+.hand {
+  position: relative;
+  width: 150px; /* Reduced width */
+  height: 180px; /* Reduced height */
+  margin-top: 20px;
+}
+
+.palm {
+  position: absolute;
+  width: 110px; /* Reduced width */
+  height: 140px; /* Reduced height */
+  background-color: #ffd6b1;
+  border-radius: 100px 100px 100px 100px;
+  bottom: 0;
+  left: 15px; /* Adjusted for smaller size */
+  box-shadow: inset -10px -10px 20px #e0b088, inset 10px 10px 20px #ffe4c4;
+}
+
+.finger {
+  position: absolute;
+  width: 20px; /* Reduced width */
+  height: 80px; /* Reduced height */
+  background-color: #ffd6b1;
+  border-radius: 10px; /* Reduced border-radius */
+  box-shadow: inset -2px -2px 4px #e0b088, inset 2px 2px 4px #ffe4c4;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fingernail {
+  position: absolute;
+  width: 18px; /* Reduced width */
+  height: 12px; /* Reduced height */
+  background-color: #ffe0e0;
+  border-radius: 50% 50% 0 0;
+  top: 5px;
+  left: 1px;
+  box-shadow: inset 0 -2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.thumb {
+  width: 28px; /* Reduced width */
+  height: 60px; /* Reduced height */
+  transform-origin: bottom center;
+}
+
+.right-hand .thumb {
+  left: 8px;
+  bottom: 60px; /* Adjusted bottom position */
+  transform: rotate(-45deg);
+}
+
+.left-hand .thumb {
+  right: 8px;
+  bottom: 60px; /* Adjusted bottom position */
+  transform: rotate(45deg);
+}
+
+.right-hand .index {
+  left: 30px; /* Adjusted left position */
+  bottom: 110px; /* Adjusted bottom position */
+}
+
+.right-hand .middle {
+  left: 55px; /* Adjusted left position */
+  bottom: 120px; /* Adjusted bottom position */
+  height: 85px; /* Reduced height */
+}
+
+.right-hand .ring {
+  left: 80px; /* Adjusted left position */
+  bottom: 110px; /* Adjusted bottom position */
+  height: 80px; /* Reduced height */
+}
+
+.right-hand .pinky {
+  left: 105px; /* Adjusted left position */
+  bottom: 90px; /* Adjusted bottom position */
+  height: 65px; /* Reduced height */
+}
+
+.left-hand .index {
+  right: 30px; /* Adjusted right position */
+  bottom: 110px; /* Adjusted bottom position */
+}
+
+.left-hand .middle {
+  right: 55px; /* Adjusted right position */
+  bottom: 120px; /* Adjusted bottom position */
+  height: 85px; /* Reduced height */
+}
+
+.left-hand .ring {
+  right: 80px; /* Adjusted right position */
+  bottom: 110px; /* Adjusted bottom position */
+  height: 80px; /* Reduced height */
+}
+
+.left-hand .pinky {
+  right: 105px; /* Adjusted right position */
+  bottom: 90px; /* Adjusted bottom position */
+  height: 65px; /* Reduced height */
+}
+
+.wrist {
+  position: absolute;
+  width: 80px; /* Reduced width */
+  height: 30px; /* Reduced height */
+  background-color: #ffd6b1;
+  border-radius: 15px; /* Adjusted border-radius */
+  bottom: -15px;
+  left: 30px; /* Adjusted left position */
+  box-shadow: inset -5px -5px 10px #e0b088, inset 5px 5px 10px #ffe4c4;
+}
+
+.left-hand .palm {
+  left: auto;
+  right: 15px; /* Adjusted right position */
+}
+
+.left-hand .wrist {
+  left: auto;
+  right: 30px; /* Adjusted right position */
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.01);
+  }
+}
+
+.hand {
+  animation: breathe 5s infinite ease-in-out;
+}
+
+.left-hand:hover .finger:not(.thumb),
+.right-hand:hover .finger:not(.thumb) {
+  transform: translateY(-5px);
+}
+
+.left-hand:hover .thumb {
+  transform: translateX(5px) rotate(-25deg);
+}
+
+.right-hand:hover .thumb {
+  transform: translateX(-5px) rotate(25deg);
+}
+
+@keyframes clickPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.finger.clicked {
+  animation: clickPulse 0.3s ease-in-out;
+}
+
+.left-hand .finger.clicked:not(.thumb),
+.right-hand .finger.clicked:not(.thumb) {
+  animation: clickPulse 0.3s ease-in-out, translateY 0.3s ease-in-out;
+}
+
+@keyframes translateY {
+  50% {
+    transform: translateY(-5px) scale(0.95);
+  }
+}
+
+.left-hand .thumb.clicked {
+  animation: clickPulse 0.3s ease-in-out, thumbRotateLeft 0.3s ease-in-out;
+}
+
+.right-hand .thumb.clicked {
+  animation: clickPulse 0.3s ease-in-out, thumbRotateRight 0.3s ease-in-out;
+}
+
+@keyframes thumbRotateLeft {
+  50% {
+    transform: translateX(5px) rotate(-25deg) scale(0.95);
+  }
+}
+
+@keyframes thumbRotateRight {
+  50% {
+    transform: translateX(-5px) rotate(25deg) scale(0.95);
+  }
+}
