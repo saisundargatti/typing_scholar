@@ -35,6 +35,13 @@ const Navbar = () => {
             Typing Test
           </Link>
           <Link
+            to="/blog"
+            className="text-sm font-medium hover:text-gray-400 transition"
+          >
+            <BookOpen size={20} className="inline-block mr-1" />
+            Blog
+          </Link>
+          <Link
             to="/learn-typing"
             className="text-sm font-medium hover:text-gray-400 transition"
           >

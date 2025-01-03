@@ -1,40 +1,91 @@
+import { useState } from "react";
 import { rows } from "../../data/keys";
 import FingerGuide from "./FingerGuide";
+
+type FingerMapping = {
+  [key: string]: string;
+};
+
+const fingerMappings: FingerMapping = {
+  "bg-pink-300": "Keys in pink should be typed with your left pinky finger",
+  "bg-blue-200": "Keys in blue should be typed with your right index finger",
+  "bg-green-200": "Keys in green should be typed with your left index finger",
+  "bg-yellow-200":
+    "Keys in yellow should be typed with your left middle finger",
+  "bg-orange-200": "Keys in orange should be typed with your left ring finger",
+  "bg-rose-200": "Keys in rose should be typed with your right pinky finger",
+  "bg-purple-300":
+    "Keys in purple should be typed with your right middle finger",
+  "bg-teal-200": "Keys in teal should be typed with your right ring finger",
+  "bg-gray-200": "Keys in gray should be typed with your thumb",
+};
 
 interface KeyProps {
   label: string;
   special?: string;
   className?: string;
+  onHover: (colorClass: string | null) => void;
 }
 
-export const Keyboard = () => {
-  const Key = ({ label, special, className = "" }: KeyProps) => (
-    <div
-      className={`relative p-2 rounded-lg shadow-sm ${className} transition-all duration-150 hover:brightness-95 active:brightness-90 flex justify-center items-center`}
-    >
-      {special && (
-        <span className="absolute text-xs text-gray-600 left-1 top-1">
-          {special}
-        </span>
-      )}
-      <span className="text-sm text-gray-800 font-medium">{label}</span>
-    </div>
-  );
+const Key = ({ label, special, className = "", onHover }: KeyProps) => {
+  // Extract the background color class
+  const bgColorClass = className
+    ?.split(" ")
+    .find((cls) => cls.startsWith("bg-"));
 
   return (
-    <div className="p-8 space-y-2 rounded-xl shadow-lg max-w-3xl mx-10 h-72">
-      {rows.map((row, rowIndex) => (
-        <div key={rowIndex} className="flex gap-1">
-          {row.map((key, keyIndex) => (
-            <Key
-              key={keyIndex}
-              label={key.label}
-              special={key.special}
-              className={key.className}
-            />
-          ))}
+    <div
+      className="relative"
+      onMouseEnter={() => bgColorClass && onHover(bgColorClass)}
+      onMouseLeave={() => onHover(null)}
+    >
+      <div
+        className={`relative p-2 rounded-lg shadow-sm ${className} transition-all duration-150 hover:brightness-95 active:brightness-90 flex justify-center items-center`}
+      >
+        {special && (
+          <span className="absolute text-xs text-gray-600 left-1 top-1">
+            {special}
+          </span>
+        )}
+        <span className="text-sm text-gray-800 font-medium">{label}</span>
+      </div>
+    </div>
+  );
+};
+
+export const Keyboard = () => {
+  const [activeColorClass, setActiveColorClass] = useState<string | null>(null);
+
+  return (
+    <div className="relative">
+      {/* Tooltip */}
+      {activeColorClass && fingerMappings[activeColorClass] && (
+        <div className="absolute z-10 px-4 py-2 text-sm text-white bg-gray-800 rounded-md -top-16 left-1/2 transform -translate-x-1/2 transition-opacity duration-200">
+          {fingerMappings[activeColorClass]}
+          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 rotate-45 w-2 h-2 bg-gray-800"></div>
         </div>
-      ))}
+      )}
+
+      {/* Keyboard */}
+      <div className="p-8 space-y-2 rounded-xl shadow-lg max-w-3xl mx-10 h-72">
+        {rows.map((row, rowIndex) => (
+          <div key={rowIndex} className="flex gap-1">
+            {row.map((key, keyIndex) => (
+              <Key
+                key={keyIndex}
+                label={key.label}
+                special={key.special}
+                className={`${key.className} ${
+                  activeColorClass && key.className?.includes(activeColorClass)
+                    ? "ring-2 ring-gray-400"
+                    : ""
+                }`}
+                onHover={setActiveColorClass}
+              />
+            ))}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

@@ -72,13 +72,13 @@ export const rows: Row[][] = [
   ],
   // Bottom row
   [
-    { label: "Ctrl", className: "bg-pink-300 w-10" },
-    { label: "Fn", className: "bg-pink-300 w-10" },
-    { label: "Win", className: "bg-pink-300 w-10" },
-    { label: "Alt", className: "bg-gray-200 w-10" },
-    { label: "Space", className: "bg-gray-200 w-[20rem]" },
-    { label: "Alt", className: "bg-gray-200 w-10" },
-    { label: "Ctrl", className: "bg-rose-200 w-10" },
+    { label: "Ctrl", className: "bg-pink-300 w-11" },
+    { label: "Fn", className: "bg-pink-300 w-11" },
+    { label: "Win", className: "bg-pink-300 w-11" },
+    { label: "Alt", className: "bg-orange-200 w-11" },
+    { label: "Space", className: "bg-gray-200 w-[15rem]" },
+    { label: "Alt", className: "bg-purple-300 w-11" },
+    { label: "Ctrl", className: "bg-teal-200 w-11" },
   ],
 ];
 
