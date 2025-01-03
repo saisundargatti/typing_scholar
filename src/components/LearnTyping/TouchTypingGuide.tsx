@@ -90,7 +90,7 @@ const TouchTypingGuide = () => {
                 alt="Keyboard finger position diagram"
                 className="rounded-lg shadow-lg w-full max-w-2xl mx-auto"
               />
-              <p className="text-gray-700 text-sm">
+              <p className="text-gray-700 text-sm italic">
                 Image by <span className="font-medium">Cy21</span>. Image link{" "}
                 <a
                   href="https://commons.wikimedia.org/wiki/File:QWERTY-home-keys-position.svg"
@@ -98,7 +98,7 @@ const TouchTypingGuide = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  here
+                  https://commons.wikimedia.org/wiki/File:QWERTY-home-keys-position.svg
                 </a>
                 .
               </p>
@@ -145,7 +145,7 @@ const TouchTypingGuide = () => {
             alt="Keyboard finger position diagram"
             className="rounded-lg shadow-lg w-full max-w-2xl mx-auto"
           />
-          <p className="text-gray-700 text-sm">
+          <p className="text-gray-700 text-sm italic">
             Image by <span className="font-medium">Artur Mihno</span>. Image
             link{" "}
             <a
@@ -154,7 +154,7 @@ const TouchTypingGuide = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              here
+              https://commons.wikimedia.org/wiki/File:Keyboard_scheme.jpg
             </a>
             .
           </p>
