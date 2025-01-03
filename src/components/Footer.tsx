@@ -67,9 +67,9 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div className="text-center md:text-left">
-            <h3 className="text-xl font-semibold mb-6 text-blue-400">
+            <h2 className="text-xl font-semibold mb-6 text-blue-400">
               Quick Links
-            </h3>
+            </h2>
             <ul className="space-y-4">
               {["Home", "About Us", "FAQ"].map((item, index) => (
                 <li key={index}>
