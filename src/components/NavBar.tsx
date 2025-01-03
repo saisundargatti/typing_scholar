@@ -1,4 +1,4 @@
-import { BookOpen, FileText, Repeat, Trophy } from "lucide-react";
+import { BookOpen, Edit, FileText, Repeat, Trophy } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
@@ -38,7 +38,7 @@ const Navbar = () => {
             to="/blog"
             className="text-sm font-medium hover:text-gray-400 transition"
           >
-            <BookOpen size={20} className="inline-block mr-1" />
+            <Edit size={20} className="inline-block mr-1" />
             Blog
           </Link>
           <Link
