@@ -91,9 +91,9 @@ const Home = () => {
                   {feature.icon}
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-xl font-bold text-gray-800 group-hover:text-gray-900">
+                  <h2 className="text-xl font-bold text-gray-800 group-hover:text-gray-900">
                     {feature.title}
-                  </h3>
+                  </h2>
                   <p className="text-gray-600 text-lg leading-relaxed">
                     {feature.description}
                   </p>
