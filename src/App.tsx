@@ -45,7 +45,7 @@ export default function App() {
   return (
     <Router>
       <Navbar />
-      <SocialMedia />
+
       <main>
         <Routes>
           <Route
@@ -53,6 +53,7 @@ export default function App() {
             element={
               <>
                 <Home />
+                <SocialMedia />
                 <Footer />
               </>
             }
