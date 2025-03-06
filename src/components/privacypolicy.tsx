@@ -1,13 +1,13 @@
 const PrivacyPolicy: React.FC = () => {
   return (
     <div>
-      <div className="font-sans bg-gray-100 p-6 text-gray-900 ">
+      <div className="font-sans bg-gray-100 px-16 py-4 text-gray-900 space-y-3">
         <h1 className="text-blue-400 text-2xl font-bold">
           Privacy Policy for Typing Scholar
         </h1>
         <p>
           At Typing Scholar, accessible from www.typingscholar.com, one of our
-          main priorities is the privacy of our visitors. This Privacy Policy
+          main priorities is the privacy of our visitors.This Privacy Policy
           document contains types of information that is collected and recorded
           by Typing Scholar and how we use it.
         </p>
